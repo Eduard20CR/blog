@@ -1,0 +1,16 @@
+---
+const tags = ["", "", "", "", "", "", "", "", ""];
+---
+
+<section class="max-w-4xl mx-auto px-10 py-20">
+  <h2 class="text-2xl font-bold uppercase">Tags</h2>
+  <ul class="flex gap-2 flex-wrap mt-7">
+    {
+      tags.map((asd) => (
+        <li class="inline">
+          <span class="text-sm uppercase bg-secondary px-2 py-1 inline-block font-bold text-white">tech</span>
+        </li>
+      ))
+    }
+  </ul>
+</section>

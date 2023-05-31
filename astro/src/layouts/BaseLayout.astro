@@ -1,0 +1,31 @@
+---
+import "./../styles/base.css";
+import Navigation from "./../components/global/navigation.astro";
+import MayWantToSee from "./../components/global/may-want-to-see.astro";
+import Tags from "./../components/global/tags.astro";
+import Footer from "./../components/global/footer.astro";
+import Pattern from "./../components/lib/patter.astro";
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SCARUS BLOG</title>
+</head>
+
+<body class="text-black">
+  <Navigation />
+  <Pattern />
+  <div class="max-w-4xl mx-auto mt-10 px-10">
+    <!-- prettier-ignore -->
+    <p class="font-bold text-gray-400 justify-center items-center inline-flex uppercase">Scarus' Blog&nbsp;<svg  class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 01-6.364 0M21 12a9 9 0 11-18 0 9 9 0 0118 0zM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75zm-.375 0h.008v.015h-.008V9.75zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75zm-.375 0h.008v.015h-.008V9.75z" /></svg>
+    </p>
+  </div>
+  <main class="mt-2">
+    <slot />
+    <MayWantToSee />
+    <Tags />
+    <Footer />
+  </main>
+</body>

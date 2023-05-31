@@ -1,19 +1,42 @@
 ---
+import BaseLayout from "./../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-		
-		<h1>My Astro Site</h1>
-	</body>
-</html>
+<BaseLayout>
+  <section class="max-w-4xl mx-auto px-10">
+    <h1 class="text-4xl font-bold uppercase">Welcome</h1>
+    <p class="mt-5 ml-20">
+      Into the world of software, games, and cutting-edge technology. Get ready for a thrilling ride through the digital landscape
+    </p>
+    <h2 class="text-2xl font-bold uppercase mt-28">Post</h2>
+    <div class="mt-5 border-b-primary border-b-2">
+      <button class="bg-primary font-bold text-white py-2 px-4" type="button">ALL</button>
+      <button class="bg-primary font-bold text-white py-2 px-4" type="button">NEWS</button>
+      <button class="bg-primary font-bold text-white py-2 px-4" type="button">POPULAR</button>
+    </div>
+
+    <div class="mt-5">
+      <article class="border-black border-2 shadow bg-white hover:scale-105 transition-transform duration-300">
+        <img class="w-full h-20 object-cover" src="https://picsum.photos/300/200" alt="" />
+        <div class="p-4">
+          <h3 class="uppercase font-bold">REVOLUTIONIZING TRANSPORTATION: THE RISE OF ELECTRIC AND AUTONOMOUS VEHICLES</h3>
+          <p class="font-bold text-gray-400">1 week ago</p>
+          <div class="mt-4">
+            <span class="text-sm bg-secondary px-2 py-1 inline-block font-bold text-white">Technology</span>
+            <span class="text-sm bg-secondary px-2 py-1 inline-block font-bold text-white">AI</span>
+            <span class="text-sm bg-secondary px-2 py-1 inline-block font-bold text-white">Javasript</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="flex justify-end">
+      <button class="bg-black font-bold text-white py-2 px-4 uppercase mt-5">SEE MORE</button>
+    </div>
+  </section>
+</BaseLayout>
+
+<!-- <form class="flex flex-col md:flex-row mt-20 gap-10 md:gap-6 justify-center" action="/tags">
+  <input class="border-2 border-black rounded px-4 py-2" placeholder="Find a post" type="text" name="filter" id="filter" />
+  <button class="border-b-2 border-black px-10 py-2 font-bold" type="submit">FIND</button>
+</form> -->

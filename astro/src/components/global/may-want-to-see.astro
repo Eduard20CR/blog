@@ -1,0 +1,18 @@
+---
+import MyReactComponent from "./../lib/general-card";
+const posts = [
+  { title: "Revolutionizing Transportation: The Rise of Electric and Autonomous Vehicles" },
+  { title: "Harnessing the Power of Artificial Intelligence: AI's Impact on Industries" },
+  { title: "The Blockchain Revolution: Beyond Cryptocurrencies" },
+  { title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde alias." },
+];
+---
+
+<section class="max-w-4xl mx-auto px-10 py-20 bg-gray-200">
+  <h2 class="text-2xl font-bold uppercase">May Want To See</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+    {posts.map((post, i) => <MyReactComponent {...post} {i} client:load />)}
+  </div>
+</section>
+
+<style></style>
